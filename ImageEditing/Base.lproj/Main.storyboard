@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="EditingViewController" customModule="ImageEditing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZn-xY-kXM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cTF-3R-Stj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fim-bA-psX" appends="YES" id="vTb-Tv-WXv"/>
+                                            <outletCollection property="gestureRecognizers" destination="Ggj-ac-qlD" appends="YES" id="33m-HA-Au9"/>
+                                            <outletCollection property="gestureRecognizers" destination="GYE-2Q-hW3" appends="YES" id="Qx3-RY-7cM"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cTF-3R-Stj" secondAttribute="trailing" id="5VB-Id-8nu"/>
+                                    <constraint firstItem="cTF-3R-Stj" firstAttribute="top" secondItem="PZn-xY-kXM" secondAttribute="top" id="AQ0-cB-E9z"/>
+                                    <constraint firstItem="cTF-3R-Stj" firstAttribute="leading" secondItem="PZn-xY-kXM" secondAttribute="leading" id="c8o-L8-4qx"/>
+                                    <constraint firstAttribute="bottom" secondItem="cTF-3R-Stj" secondAttribute="bottom" id="jdM-7w-uo8"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpg-Lo-Gtv">
+                                <rect key="frame" x="346" y="64" width="48" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Emoji"/>
+                                <connections>
+                                    <action selector="addEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFd-mr-Et8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpT-lX-AZT">
+                                <rect key="frame" x="272" y="64" width="54" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Image"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2jL-wy-hDW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-XJ-XNl">
+                                <rect key="frame" x="20" y="64" width="66" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Render"/>
+                                <connections>
+                                    <action selector="render:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9U8-ec-DK9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dpg-Lo-Gtv" firstAttribute="leading" secondItem="LpT-lX-AZT" secondAttribute="trailing" constant="20" id="3Lq-DA-nOb"/>
+                            <constraint firstItem="LpT-lX-AZT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3xK-Q9-ux8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dpg-Lo-Gtv" secondAttribute="trailing" constant="20" id="5ab-Xr-Gmk"/>
+                            <constraint firstItem="Dpg-Lo-Gtv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8dc-wG-D2k"/>
+                            <constraint firstItem="PZn-xY-kXM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BE0-TX-23C"/>
+                            <constraint firstItem="hlA-XJ-XNl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Bn3-Lp-gj6"/>
+                            <constraint firstItem="PZn-xY-kXM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GU2-ZL-HZy"/>
+                            <constraint firstItem="PZn-xY-kXM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="P0a-fd-MKM"/>
+                            <constraint firstItem="PZn-xY-kXM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RPO-pR-iWT"/>
+                            <constraint firstItem="hlA-XJ-XNl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="egE-6w-pCF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageContainerView" destination="PZn-xY-kXM" id="f9L-YM-71Y"/>
+                        <outlet property="imageView" destination="cTF-3R-Stj" id="Uqf-gF-Ff6"/>
+                        <outlet property="panGestureRecognizer" destination="GYE-2Q-hW3" id="Maz-Rv-kk1"/>
+                        <outlet property="pinchGestureRecognizer" destination="fim-bA-psX" id="FyD-Nk-Y2m"/>
+                        <outlet property="rotationGestureRecognizer" destination="Ggj-ac-qlD" id="Qw9-XC-c98"/>
+                        <segue destination="jbz-Mh-209" kind="presentation" identifier="render" id="Qke-YZ-lup"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GYE-2Q-hW3">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="Xig-Ph-RfM"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="hIw-gp-d9d"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="fim-bA-psX">
+                    <connections>
+                        <action selector="pinch:" destination="BYZ-38-t0r" id="Esz-Z9-Qx0"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Ztb-Od-cA0"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="Ggj-ac-qlD">
+                    <connections>
+                        <action selector="rotate:" destination="BYZ-38-t0r" id="732-Ku-Vd8"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Pp2-xd-MuJ"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Rendered Image View Controller-->
+        <scene sceneID="rbA-2P-LfU">
+            <objects>
+                <viewController id="jbz-Mh-209" customClass="RenderedImageViewController" customModule="ImageEditing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y7i-o3-Sgd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zny-Bk-E9P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zny-Bk-E9P" firstAttribute="leading" secondItem="kkC-rx-uKd" secondAttribute="leading" id="LtS-CC-pBX"/>
+                            <constraint firstItem="zny-Bk-E9P" firstAttribute="top" secondItem="kkC-rx-uKd" secondAttribute="top" id="SbA-cG-dcZ"/>
+                            <constraint firstItem="zny-Bk-E9P" firstAttribute="trailing" secondItem="kkC-rx-uKd" secondAttribute="trailing" id="aCZ-ax-UAL"/>
+                            <constraint firstItem="zny-Bk-E9P" firstAttribute="bottom" secondItem="kkC-rx-uKd" secondAttribute="bottom" id="hl7-k7-him"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kkC-rx-uKd"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zny-Bk-E9P" id="YHw-05-B24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6L-kQ-H9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966.66666666666674" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
